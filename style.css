@@ -58,6 +58,50 @@ a {
   color: white;
   text-decoration: none;
 }
+/* Menu burger */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  nav,
+  .cta {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ nav,
+  #menu-toggle:checked ~ .cta {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #2e4d3d;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cta {
+    margin-top: 20px;
+  }
+}
 
 /* HERO */
 .hero {
